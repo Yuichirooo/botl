@@ -35,11 +35,11 @@ def callback():
     return 'OK'
 
 
-@handler.add(MessageEvent, message=TextMessage)
+@handler.add(MessageEvent, message="Apakah ,apakah ")
 def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))
+        TextSendMessage(text="iya , bisa jadi , tidak , mungkin , coba sekali lagi"))
 
 
 if __name__ == "__main__":
